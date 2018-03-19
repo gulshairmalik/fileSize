@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset='utf-8')
+        title fileSize Service
+        link(href='/css/bootstrap.min.css', rel='stylesheet')
+    body
+        .container
+            .jumbotron
+                h1.text-center fileSize Service
+            h2.text-info fileSize App:
+            p(style="font-size:15px;") This is a simple file metadata app, developed in Express.Js.
+            h2.text-info APP Link:
+            a(href="https://filesize55.herokuapp.com",style="font-size:18px;",target="_blank") https://filesize55.herokuapp.com 
+            h2.text-info How to use this APP:
+            p(style="font-size:15px;") Use of this APP is very simple, only you have to submit a file in the following form and it will return a JSON response which includes the file size in bytes of submitted file.
+            p(style="font-size:15px") For example, if you submit any file it will give you: <code>{"fileSize":"....", success":"...."}</code>
+            h3.text-info Submit a file to view its size in bytes
+            form(action='/getsize' method='post', enctype='multipart/form-data')
+                p(style="font-size:15px;") Select a file:
+                input(type='file', name='file')
+                br
+                input.btn.btn-primary(type='submit', value='Submit', name='submit',style="border-radius:20px")
+            br
+            br
+            center
+                img(src="/img/g.jpg",class="img img-responsive img-circle",style="width:50px;height:50px;")
+                a(href="https://github.com/gulshairmalik",target="_blank",class="text-center",style="font-size:18px;text-decoration:none;") Gulshair Malik
